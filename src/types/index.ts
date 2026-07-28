@@ -23,8 +23,6 @@ export interface Technology {
   category: TechCategory;
   /** Inline SVG path data rendered inside a 24x24 viewBox. */
   path: string;
-  /** Brand colour revealed on hover. */
-  brand: string;
 }
 
 export interface Project {

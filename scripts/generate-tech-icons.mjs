@@ -28,13 +28,9 @@ const toKey = (slug) => "si" + slug.charAt(0).toUpperCase() + slug.slice(1);
 const entries = stack.map(([slug, name, category]) => {
   const icon = icons[toKey(slug)];
   if (!icon) throw new Error(`simple-icons has no entry for "${slug}"`);
-  return {
-    id: slug,
-    name,
-    category,
-    path: icon.path,
-    brand: `#${icon.hex}`,
-  };
+  // Brand colours are deliberately not carried over: icons tint to the site
+  // accent on hover, so a per-brand colour would be dead data.
+  return { id: slug, name, category, path: icon.path };
 });
 
 const file = `import type { Technology } from "@/types";
