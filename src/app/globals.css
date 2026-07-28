@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  /* Surfaces */
-  --color-base: #0a0a0b;
-  --color-surface: #121214;
-  --color-elevated: #1a1a1d;
+  /* Surfaces.
+     Base is pure black on purpose: the hero portrait has a #000000 background on
+     every edge, so anything lighter would draw a visible rectangle around it. */
+  --color-base: #000000;
+  --color-surface: #0b0b0d;
+  --color-elevated: #131316;
 
   /* Borders */
-  --color-line: #27272a;
-  --color-line-strong: #3f3f46;
+  --color-line: #232326;
+  --color-line-strong: #3a3a40;
 
   /* Text */
   --color-ink: #fafafa;

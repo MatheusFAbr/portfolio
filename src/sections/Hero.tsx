@@ -9,19 +9,35 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[92vh] items-center overflow-hidden pt-28 pb-20 lg:pt-32"
     >
-      {/* Decorative depth layers — never announced to assistive tech. */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 grid-veil opacity-60" />
+      {/* No grid texture or backlight glow in this section: either one would trace
+          the portrait's rectangle and break the blend into the black background. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-[-10%] h-[520px] w-[820px] -translate-x-1/2 rounded-full bg-accent/12 blur-[140px]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-base"
+        className="pointer-events-none absolute right-0 top-1/4 h-[460px] w-[560px] translate-x-1/3 rounded-full bg-accent/8 blur-[150px]"
       />
 
-      <div className="shell relative grid items-center gap-14 lg:grid-cols-12 lg:gap-16">
-        <div className="flex flex-col items-start gap-7 lg:col-span-7">
+      <div className="shell relative grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
+        <div className="order-2 lg:order-1 lg:col-span-6">
+          <Image
+            src="/images/hero-portrait.jpeg"
+            alt={`Retrato de ${site.name}, ${site.role.toLowerCase()}`}
+            width={1122}
+            height={1402}
+            priority
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="h-auto w-full max-w-md object-cover mx-auto lg:mx-0 lg:max-w-none"
+            style={{
+              // Feathers the outer edges so the photo dissolves into the page
+              // instead of ending on a straight cut.
+              maskImage:
+                "radial-gradient(115% 105% at 42% 45%, #000 55%, transparent 100%)",
+              WebkitMaskImage:
+                "radial-gradient(115% 105% at 42% 45%, #000 55%, transparent 100%)",
+            }}
+          />
+        </div>
+
+        <div className="order-1 flex flex-col items-start gap-7 lg:order-2 lg:col-span-6">
           {site.availability.open && (
             <span className="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface/80 py-1.5 pl-2.5 pr-4 text-sm text-ink-muted backdrop-blur">
               <span className="relative flex h-2 w-2" aria-hidden>
@@ -37,7 +53,7 @@ export function Hero() {
               {site.role}
             </span>
 
-            <h1 className="max-w-2xl text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.25rem] xl:text-6xl">
               Transformo processo manual em{" "}
               <span className="text-accent">software que trabalha sozinho</span>.
             </h1>
@@ -59,29 +75,6 @@ export function Hero() {
             <ButtonLink href="#projetos" variant="secondary" size="lg">
               Ver projetos
             </ButtonLink>
-          </div>
-        </div>
-
-        <div className="relative lg:col-span-5">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute -inset-6 rounded-[32px] bg-accent/10 blur-3xl"
-          />
-          <div className="relative overflow-hidden rounded-[24px] border border-line bg-surface">
-            <Image
-              src="/images/hero-portrait.jpeg"
-              alt={`Retrato de ${site.name}, ${site.role.toLowerCase()}`}
-              width={1122}
-              height={1402}
-              priority
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              className="h-auto w-full object-cover"
-            />
-            {/* Fades the photo into the page background instead of ending on a hard edge. */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-base/85 via-base/10 to-transparent"
-            />
           </div>
         </div>
       </div>
