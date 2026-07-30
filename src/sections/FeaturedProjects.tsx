@@ -11,7 +11,7 @@ import { cn } from "@/utils/cn";
 function ProjectVisual({ project }: { project: Project }) {
   if (project.isPlaceholder) {
     return (
-      <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-3 rounded-[20px] border border-dashed border-line-strong bg-surface text-ink-muted">
+      <div className="flex aspect-[1600/825] w-full flex-col items-center justify-center gap-3 rounded-[20px] border border-dashed border-line-strong bg-surface text-ink-muted">
         <ImageOff size={22} aria-hidden />
         <p className="px-6 text-center text-sm">
           Imagem de {project.name} pendente
@@ -22,13 +22,15 @@ function ProjectVisual({ project }: { project: Project }) {
 
   return (
     <div className="group/media relative overflow-hidden rounded-[20px] border border-line bg-surface">
+      {/* Container matches the screenshots' native ~1.94:1 ratio, so object-cover
+          has nothing to crop and the full interface stays visible. */}
       <Image
         src={project.image}
         alt={`Interface do projeto ${project.name}`}
         width={1600}
-        height={1000}
+        height={825}
         sizes="(min-width: 1024px) 55vw, 100vw"
-        className="aspect-[16/10] w-full object-cover transition-transform duration-[600ms] ease-[var(--ease-out-soft)] group-hover/media:scale-[1.04]"
+        className="aspect-[1600/825] w-full object-cover transition-transform duration-[600ms] ease-[var(--ease-out-soft)] group-hover/media:scale-[1.04]"
       />
       <div
         aria-hidden

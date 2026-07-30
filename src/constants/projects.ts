@@ -1,46 +1,39 @@
 import type { Project } from "@/types";
 
 /**
- * PLACEHOLDER CONTENT — every entry below is flagged `isPlaceholder: true`.
- *
- * To publish a real project: drop the screenshot in /public/images/projects/,
- * point `image` at it, rewrite `description` around the business outcome, fill in
- * `link`/`caseStudyLink`, then remove the `isPlaceholder` flag. The section renders
- * straight from this array — no component or style changes needed to add a fourth
- * or fifth project.
+ * `technologies` is intentionally empty until each stack is confirmed — the
+ * badge list simply renders nothing rather than showing filler text. Same for
+ * `link`/`caseStudyLink`: without a URL the card shows no dead "Ver projeto".
  */
 export const projects: Project[] = [
   {
     id: "urbanz",
     order: "01",
     name: "Urbanz",
-    category: "A definir",
+    category: "Marca / Streetwear",
     description:
-      "Descrição pendente. Escreva 2–3 linhas sobre o problema de negócio que o projeto resolveu e o resultado que ele gerou — não sobre a stack usada.",
-    technologies: ["A definir"],
+      "Marca de streetwear masculino de Juquiá que precisava existir online com a mesma presença que tem na rua. Vitrine editorial em preto e branco, com contato direto por WhatsApp para encurtar o caminho entre a visita e a venda.",
+    technologies: [],
     image: "/images/projects/urbanz.jpg",
-    isPlaceholder: true,
-  },
-  {
-    id: "sylvatech",
-    order: "02",
-    name: "SylvaTech",
-    category: "A definir",
-    description:
-      "Descrição pendente. Escreva 2–3 linhas sobre o problema de negócio que o projeto resolveu e o resultado que ele gerou — não sobre a stack usada.",
-    technologies: ["A definir"],
-    image: "/images/projects/sylvatech.jpg",
-    isPlaceholder: true,
   },
   {
     id: "sylvaai",
-    order: "03",
+    order: "02",
     name: "SylvaAI",
-    category: "A definir",
+    category: "Aplicação Web / Visão Computacional",
     description:
-      "Descrição pendente. Escreva 2–3 linhas sobre o problema de negócio que o projeto resolveu e o resultado que ele gerou — não sobre a stack usada.",
-    technologies: ["A definir"],
+      "Plantação florestal perde a árvore inteira quando a praga é notada tarde demais. Painel que analisa imagens de Pinus, classifica cada árvore entre saudável e infestada e reúne histórico, distribuição e evolução por período em uma tela só.",
+    technologies: [],
     image: "/images/projects/sylvaai.jpg",
-    isPlaceholder: true,
+  },
+  {
+    id: "sylvatech",
+    order: "03",
+    name: "SylvaTech",
+    category: "Site Institucional",
+    description:
+      "A camada de apresentação do projeto de monitoramento ambiental: explica a proposta, a tecnologia e a equipe para quem precisa entender a solução antes de decidir conversar.",
+    technologies: [],
+    image: "/images/projects/sylvatech.jpg",
   },
 ];
