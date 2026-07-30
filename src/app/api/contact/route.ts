@@ -35,6 +35,11 @@ export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.CONTACT_FROM_EMAIL;
 
+  // Resend's shared test sender (onboarding@resend.dev) only delivers to the
+  // address that owns the Resend account. That is not necessarily the address
+  // shown on the site, so the destination is configurable and falls back to it.
+  const to = process.env.CONTACT_TO_EMAIL ?? site.email;
+
   // Fail loudly rather than pretending the message was delivered.
   if (!apiKey || !from) {
     console.error(
@@ -56,7 +61,7 @@ export async function POST(request: Request) {
     },
     body: JSON.stringify({
       from,
-      to: site.email,
+      to,
       reply_to: email,
       subject: `Novo contato pelo site — ${name}`,
       html: `
