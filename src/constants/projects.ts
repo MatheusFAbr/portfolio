@@ -15,6 +15,7 @@ export const projects: Project[] = [
       "Marca de streetwear masculino de Juquiá que precisava existir online com a mesma presença que tem na rua. Vitrine editorial em preto e branco, com contato direto por WhatsApp para encurtar o caminho entre a visita e a venda.",
     technologies: [],
     image: "/images/projects/urbanz.jpg",
+    link: "https://urbanz-site.vercel.app",
   },
   {
     id: "sylvaai",
@@ -25,6 +26,7 @@ export const projects: Project[] = [
       "Plantação florestal perde a árvore inteira quando a praga é notada tarde demais. Painel que analisa imagens de Pinus, classifica cada árvore entre saudável e infestada e reúne histórico, distribuição e evolução por período em uma tela só.",
     technologies: [],
     image: "/images/projects/sylvaai.jpg",
+    link: "https://pinus-pest-detector.vercel.app",
   },
   {
     id: "sylvatech",
@@ -35,5 +37,6 @@ export const projects: Project[] = [
       "A camada de apresentação do projeto de monitoramento ambiental: explica a proposta, a tecnologia e a equipe para quem precisa entender a solução antes de decidir conversar.",
     technologies: [],
     image: "/images/projects/sylvatech.jpg",
+    link: "https://sylvatech-website.vercel.app",
   },
 ];
