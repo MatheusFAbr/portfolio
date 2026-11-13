@@ -18,7 +18,6 @@ export const projects: Project[] = [
     image: "/images/projects/projuris-automation.jpg",
     caseStudyLink:
       "https://github.com/MatheusFAbr/projurisadv-ai-integration",
-    isPlaceholder: true,
   },
   {
     id: "bubatag",
@@ -37,7 +36,6 @@ export const projects: Project[] = [
     ],
     image: "/images/projects/bubatag.png",
     link: "https://bubatag-site.vercel.app",
-    isPlaceholder: true,
   },
   {
     id: "urbanz",
