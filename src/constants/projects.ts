@@ -15,7 +15,7 @@ export const projects: Project[] = [
       "API REST",
       "Integração de sistemas",
     ],
-    image: "/images/projects/projurisadv.jpg",
+    image: "/images/projects/projuris-automation.jpg",
     caseStudyLink:
       "https://github.com/MatheusFAbr/projurisadv-ai-integration",
     isPlaceholder: true,
@@ -35,7 +35,7 @@ export const projects: Project[] = [
       "Vite",
       "Tailwind CSS",
     ],
-    image: "/images/projects/bubatag.jpg",
+    image: "/images/projects/bubatag.png",
     link: "https://bubatag-site.vercel.app",
     isPlaceholder: true,
   },
