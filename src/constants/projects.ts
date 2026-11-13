@@ -1,42 +1,58 @@
 import type { Project } from "@/types";
 
-/**
- * `technologies` is intentionally empty until each stack is confirmed — the
- * badge list simply renders nothing rather than showing filler text. Same for
- * `link`/`caseStudyLink`: without a URL the card shows no dead "Ver projeto".
- */
 export const projects: Project[] = [
   {
-    id: "urbanz",
+    id: "projurisadv-ai",
     order: "01",
-    name: "Urbanz",
-    category: "Marca / Streetwear",
+    name: "ProjurisADV AI Integration",
+    category: "IA aplicada / Automação de processos",
     description:
-      "Marca de streetwear masculino de Juquiá que precisava existir online com a mesma presença que tem na rua. Vitrine editorial em preto e branco, com contato direto por WhatsApp para encurtar o caminho entre a visita e a venda.",
-    technologies: [],
+      "Integração entre Claude, n8n e a API REST do ProjurisADV para facilitar a consulta de informações jurídicas por meio de linguagem natural. A solução permite consultar pessoas, processos, andamentos e arquivos, reduzindo a necessidade de buscas manuais e tornando o acesso às informações mais rápido para a equipe.",
+    technologies: [
+      "Claude",
+      "n8n",
+      "MCP",
+      "API REST",
+      "Integração de sistemas",
+    ],
+    image: "/images/projects/projurisadv.jpg",
+    caseStudyLink:
+      "https://github.com/MatheusFAbr/projurisadv-ai-integration",
+    isPlaceholder: true,
+  },
+  {
+    id: "bubatag",
+    order: "02",
+    name: "Bubatag",
+    category: "IoT / Monitoramento inteligente",
+    description:
+      "Projeto acadêmico voltado ao monitoramento de búfalos por meio de dispositivos IoT. A solução combina sensores e conectividade LoRaWAN para coletar informações fisiológicas e de localização, disponibilizando os dados em uma plataforma web com recursos de gestão e análise.",
+    technologies: [
+      "ESP32",
+      "LoRaWAN",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+    ],
+    image: "/images/projects/bubatag.jpg",
+    link: "https://bubatag-site.vercel.app",
+    isPlaceholder: true,
+  },
+  {
+    id: "urbanz",
+    order: "03",
+    name: "Urbanz",
+    category: "Desenvolvimento Web",
+    description:
+      "Desenvolvimento de uma vitrine digital para uma marca de streetwear masculino. O projeto apresenta os produtos e a identidade visual da marca em uma experiência responsiva, com navegação simples e acesso direto ao contato comercial.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
     image: "/images/projects/urbanz.jpg",
     link: "https://urbanz-site.vercel.app",
-  },
-  {
-    id: "sylvaai",
-    order: "02",
-    name: "SylvaAI",
-    category: "Aplicação Web / Visão Computacional",
-    description:
-      "Plantação florestal perde a árvore inteira quando a praga é notada tarde demais. Painel que analisa imagens de Pinus, classifica cada árvore entre saudável e infestada e reúne histórico, distribuição e evolução por período em uma tela só.",
-    technologies: [],
-    image: "/images/projects/sylvaai.jpg",
-    link: "https://pinus-pest-detector.vercel.app",
-  },
-  {
-    id: "sylvatech",
-    order: "03",
-    name: "SylvaTech",
-    category: "Site Institucional",
-    description:
-      "A camada de apresentação do projeto de monitoramento ambiental: explica a proposta, a tecnologia e a equipe para quem precisa entender a solução antes de decidir conversar.",
-    technologies: [],
-    image: "/images/projects/sylvatech.jpg",
-    link: "https://sylvatech-website.vercel.app",
   },
 ];

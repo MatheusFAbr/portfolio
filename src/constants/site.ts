@@ -2,7 +2,7 @@ export const site = {
   name: "Matheus Ferrari Abrahão",
   shortName: "Matheus Abrahão",
   logo: "Abrahão",
-  role: "Desenvolvedor Full-Stack",
+  role: "Desenvolvedor de Software | IA e Automação",
   location: "Juquiá, SP",
   email: "mferrariabr@gmail.com",
   linkedin: "https://www.linkedin.com/in/matheus-ferrari-abrahao",

@@ -9,8 +9,6 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[92vh] items-center overflow-hidden pt-28 pb-20 lg:pt-32"
     >
-      {/* No grid texture or backlight glow in this section: either one would trace
-          the portrait's rectangle and break the blend into the black background. */}
       <div
         aria-hidden
         className="pointer-events-none absolute right-0 top-1/4 h-[460px] w-[560px] translate-x-1/3 rounded-full bg-accent/8 blur-[150px]"
@@ -25,10 +23,8 @@ export function Hero() {
             height={1402}
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="h-auto w-full max-w-md object-cover mx-auto lg:mx-0 lg:max-w-none"
+            className="mx-auto h-auto w-full max-w-md object-cover lg:mx-0 lg:max-w-none"
             style={{
-              // Feathers the outer edges so the photo dissolves into the page
-              // instead of ending on a straight cut.
               maskImage:
                 "radial-gradient(115% 105% at 42% 45%, #000 55%, transparent 100%)",
               WebkitMaskImage:
@@ -54,26 +50,27 @@ export function Hero() {
             </span>
 
             <h1 className="text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.25rem] xl:text-6xl">
-              Transformo processo manual em{" "}
-              <span className="text-accent">software que trabalha sozinho</span>.
+              Transformo ideias e processos em{" "}
+              <span className="text-accent">
+                soluções inteligentes.
+              </span>
             </h1>
 
             <p className="max-w-xl text-lg leading-relaxed text-ink-muted">
-              Sistemas e automações para quem já perdeu tempo demais com planilha
-              solta, retrabalho e processo que só existe na cabeça de alguém.{" "}
-              <strong className="font-medium text-ink">
-                Do primeiro código ao sistema rodando
-              </strong>{" "}
-              — sem atalho e sem caixa-preta.
+              Desenvolvo sistemas, automações e integrações com inteligência
+              artificial para resolver problemas reais. Trabalho conectando
+              tecnologias, APIs e ferramentas para transformar tarefas
+              complexas em soluções simples e eficientes.
             </p>
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <ButtonLink href="#contato" size="lg">
-              Iniciar um projeto
-            </ButtonLink>
-            <ButtonLink href="#projetos" variant="secondary" size="lg">
+            <ButtonLink href="#projetos" size="lg">
               Ver projetos
+            </ButtonLink>
+
+            <ButtonLink href="#contato" variant="secondary" size="lg">
+              Entrar em contato
             </ButtonLink>
           </div>
         </div>

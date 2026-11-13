@@ -1,35 +1,29 @@
 import type { ExperienceEntry } from "@/types";
 
-/**
- * Ordered most recent first. Entries flagged `isPlaceholder` are missing details
- * (employer, course, institution) that must be filled in before going live.
- */
 export const experience: ExperienceEntry[] = [
   {
-    id: "estagio",
-    period: "Mai 2026 — Atual",
-    title: "Estagiário em Desenvolvimento",
-    organization: "Empresa a definir",
+    id: "anunciato",
+    period: "Mai 2026 — Ago 2026",
+    title: "Estagiário de Desenvolvimento de Sistemas",
+    organization: "Anunciato Advogados",
     description:
-      "Primeira experiência profissional na área, aplicando em produção o que até então vinha sendo construído em projetos acadêmicos.",
-    current: true,
-    isPlaceholder: true,
+      "Atuação no desenvolvimento e na manutenção de soluções internas, automações e integrações entre sistemas por meio de APIs REST e n8n. Desenvolvimento de uma integração entre Claude e ProjurisADV, utilizando a capacidade MCP nativa do n8n para permitir consultas a pessoas, processos, andamentos e arquivos em linguagem natural. Também prestei suporte técnico aos usuários, auxiliando na configuração de equipamentos, impressoras e resolução de problemas de infraestrutura.",
   },
   {
     id: "graduacao",
     period: "2024 — 2027",
-    title: "Graduação em andamento",
-    organization: "Instituição a definir",
+    title: "Tecnologia em Desenvolvimento de Software Multiplataforma",
+    organization: "FATEC Registro",
     description:
-      "Formação superior com conclusão prevista para julho de 2027, com foco em desenvolvimento de aplicações web e arquitetura de sistemas.",
-    isPlaceholder: true,
+      "Graduação com foco no desenvolvimento de software, programação, banco de dados, engenharia de software e construção de soluções tecnológicas. Conclusão prevista para julho de 2027.",
+    current: true,
   },
   {
     id: "tecnico",
     period: "2021 — 2023",
     title: "Técnico em Desenvolvimento de Sistemas",
-    organization: "Ensino técnico integrado ao médio",
+    organization: "ETEC — Ensino técnico integrado ao médio",
     description:
-      "Três anos de formação técnica construindo sistemas do zero — o período em que a programação deixou de ser matéria e virou ferramenta de resolver problema.",
+      "Formação técnica integrada ao ensino médio, com aprendizado em lógica de programação, desenvolvimento de sistemas, banco de dados e fundamentos da engenharia de software.",
   },
 ];
